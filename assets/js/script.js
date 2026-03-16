@@ -31,6 +31,21 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
+  // Subdropdown toggle for mobile
+  document.querySelectorAll(".has-subdropdown > a").forEach((link) => {
+    link.addEventListener("click", (e) => {
+      if (window.innerWidth <= 1024) {
+        e.preventDefault();
+        e.stopPropagation();
+        const parent = link.parentElement;
+        document.querySelectorAll(".has-subdropdown.open").forEach((other) => {
+          if (other !== parent) other.classList.remove("open");
+        });
+        parent.classList.toggle("open");
+      }
+    });
+  });
+
   // Sticky header on scroll
   const header = document.querySelector(".site-header");
   const headerHeight = header.offsetHeight;
@@ -42,6 +57,76 @@ document.addEventListener("DOMContentLoaded", () => {
       header.classList.remove("sticky");
     }
   });
+
+  // Modal open/close helper
+  function openModal(id) {
+    const modal = document.getElementById(id);
+    if (modal) {
+      modal.classList.add("active");
+      document.body.style.overflow = "hidden";
+    }
+  }
+
+  function closeModal(modal) {
+    modal.classList.remove("active");
+    document.body.style.overflow = "";
+  }
+
+  // Bind open triggers
+  const modalTriggers = [
+    { btn: "hero-cta-btn", modal: "offerModal" },
+    { btn: "guide-cta-btn", modal: "guideModal" },
+  ];
+
+  modalTriggers.forEach(({ btn, modal }) => {
+    const el = document.getElementById(btn);
+    if (el) {
+      el.addEventListener("click", (e) => {
+        e.preventDefault();
+        openModal(modal);
+      });
+    }
+  });
+
+  // Close buttons
+  document.querySelectorAll("[data-modal-close]").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const overlay = btn.closest(".modal-overlay");
+      if (overlay) closeModal(overlay);
+    });
+  });
+
+  // Close on overlay click
+  document.querySelectorAll(".modal-overlay").forEach((overlay) => {
+    overlay.addEventListener("click", (e) => {
+      if (e.target === overlay) closeModal(overlay);
+    });
+  });
+
+  // Close on Escape
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") {
+      const active = document.querySelector(".modal-overlay.active");
+      if (active) closeModal(active);
+    }
+  });
+
+  // Scroll to top button
+  const scrollTopBtn = document.getElementById("scrollTopBtn");
+  if (scrollTopBtn) {
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 400) {
+        scrollTopBtn.classList.add("visible");
+      } else {
+        scrollTopBtn.classList.remove("visible");
+      }
+    });
+
+    scrollTopBtn.addEventListener("click", (e) => {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  }
 
   // Close menu when clicking outside
   document.addEventListener("click", (e) => {
