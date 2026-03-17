@@ -1656,12 +1656,6 @@ h1,h2,h3,h4,h5,h6 {
     padding: 50px 0 60px;
 }
 
-/* .persone-content-wrapper {
-    max-width: 1170px;
-    padding: 0 10px;
-    margin: 0 auto;
-} */
-
 .persone-content-wrapper h2 {
     font-size: 42px;
     color: var(--header-text-color);
@@ -1704,7 +1698,7 @@ h1,h2,h3,h4,h5,h6 {
 .panel-tabs-nav {
     display: flex;
     flex-direction: column;
-    border-left: 3px solid var(--header-bg-color);
+    border-left: 3px solid transparent;
 }
 
 .panel-tab {
@@ -1771,7 +1765,7 @@ h1,h2,h3,h4,h5,h6 {
         flex-wrap: wrap;
         row-gap: 16px;
         border-left: none;
-        border-bottom: 3px solid var(--header-bg-color);
+        border-bottom: 3px solid transparent;
     }
 
     .panel-tab {
@@ -2320,6 +2314,233 @@ h1,h2,h3,h4,h5,h6 {
 
     .logo img {
         width: 220px;
+    }
+}
+
+/* ===================== MYSTERY MARKETING NEWS ===================== */
+.mmn-intro-section {
+    padding: 60px 0 40px;
+}
+
+.mmn-intro-section p {
+    line-height: 1.8;
+    margin-bottom: 16px;
+    max-width: 1170px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.mmn-drop-cap {
+    float: left;
+    font-size: 45px;
+    line-height: 1;
+    color: #fff;
+    background: var(--secondary-color);
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    margin-right: 12px;
+    margin-top: 4px;
+}
+
+.text-link {
+    color: var(--secondary-color);
+}
+
+.text-link:hover {
+    text-decoration: underline;
+}
+
+.text-link-underline {
+    color: var(--primary-color);
+    text-decoration: underline;
+}
+
+.mmn-content-section {
+    padding: 20px 0 60px;
+}
+
+.mmn-content-grid {
+    display: grid;
+    grid-template-columns: 1fr 430px;
+    gap: 40px;
+    align-items: start;
+}
+
+.mmn-content-left h2 {
+    font-size: 42px;
+    color: var(--header-text-color);
+    line-height: 1.3;
+    margin-bottom: 15px;
+}
+
+.mmn-issue-subtitle {
+    font-size: 22px;
+    color: var(--header-text-color);
+    margin-bottom: 10px;
+    font-weight: 300;
+    font-family: var(--primary-font);
+}
+
+.mmn-content-right {
+    display: flex;
+    justify-content: center;
+}
+
+.mmn-content-right img {
+    border: 2px solid #f6f6f6;
+    border-radius: 4px;
+}
+
+.mmn-free-bar {
+    background: var(--header-text-color);
+    padding: 60px 0;
+    text-align: center;
+}
+
+.mmn-free-bar p {
+    font-size: 22px;
+    color: #fff;
+    font-weight: 300;
+    font-family: var(--primary-font);
+    line-height: 1.5;
+}
+
+.mmn-slider-section {
+    padding: 60px 0;
+}
+
+.mmn-slider-wrapper {
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.inner-cta-section.bg-img {
+    background-image: url('/assets/images/contact-form.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgb(43 43 43 / 96%);
+    background-blend-mode: overlay;
+    padding: 90px 0;
+}
+
+.mmn-slider-track {
+    display: flex;
+    gap: 20px;
+    transition: transform 0.4s ease;
+    padding: 0 10px;
+}
+
+.mmn-slider-slide {
+    flex: 0 0 calc(20% - 16px);
+}
+
+.mmn-slider-slide img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+.mmn-slider-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+}
+
+.mmn-slider-arrow:hover {
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.mmn-slider-prev {
+    left: 0;
+}
+
+.mmn-slider-next {
+    right: 0;
+}
+
+@media (max-width: 991px) {
+    .mmn-content-left h2 {
+        font-size: 32px;
+    }
+
+    .mmn-content-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .mmn-issue-subtitle {
+        font-size: 20px;
+    }
+
+    .mmn-slider-slide {
+        flex: 0 0 calc(33.333% - 14px);
+    }
+
+    .inner-cta-section.bg-img {
+        padding: 60px 0;
+    }
+}
+
+@media (max-width: 767px) {
+    .mmn-content-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .mmn-content-right img {
+        max-width: 400px;
+    }
+
+    .mmn-slider-slide {
+        flex: 0 0 calc(50% - 10px);
+    }
+
+    .mmn-issue-subtitle {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 576px) {
+    .mmn-intro-section {
+        padding: 40px 0 30px;
+    }
+
+    .mmn-content-section {
+        padding: 10px 0 40px;
+    }
+
+    .mmn-content-left h2 {
+        font-size: 24px;
+    }
+
+    .mmn-drop-cap {
+        font-size: 42px;
+        width: 42px;
+        height: 42px;
+    }
+
+    .mmn-slider-slide {
+        flex: 0 0 calc(50% - 10px);
+    }
+
+    .mmn-slider-section {
+        padding: 40px 0;
     }
 }
 
