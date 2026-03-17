@@ -72,19 +72,12 @@ document.addEventListener("DOMContentLoaded", () => {
     document.body.style.overflow = "";
   }
 
-  // Bind open triggers
-  const modalTriggers = [
-    { btn: "hero-cta-btn", modal: "offerModal" },
-    { btn: "guide-cta-btn", modal: "guideModal" },
-  ];
-
-  modalTriggers.forEach(({ btn, modal }) => {
-    const el = document.getElementById(btn);
-    if (el) {
-      el.addEventListener("click", (e) => {
-        e.preventDefault();
-        openModal(modal);
-      });
+  // Open modals via data-modal attribute (event delegation)
+  document.addEventListener("click", (e) => {
+    const trigger = e.target.closest("[data-modal]");
+    if (trigger) {
+      e.preventDefault();
+      openModal(trigger.getAttribute("data-modal"));
     }
   });
 
@@ -109,6 +102,18 @@ document.addEventListener("DOMContentLoaded", () => {
       const active = document.querySelector(".modal-overlay.active");
       if (active) closeModal(active);
     }
+  });
+
+  // Panel Tabs
+  document.querySelectorAll(".panel-tab").forEach((tab) => {
+    tab.addEventListener("click", () => {
+      const container = tab.closest(".panel-tabs-section");
+      container.querySelectorAll(".panel-tab").forEach((t) => t.classList.remove("active"));
+      container.querySelectorAll(".panel-tab-pane").forEach((p) => p.classList.remove("active"));
+      tab.classList.add("active");
+      const pane = container.querySelector("#tab-" + tab.getAttribute("data-tab"));
+      if (pane) pane.classList.add("active");
+    });
   });
 
   // Scroll to top button

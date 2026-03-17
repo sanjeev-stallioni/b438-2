@@ -237,6 +237,47 @@
         </a>
     </div>
 
+    <!-- Guide Download Modal -->
+    <div class="modal-overlay" id="guideModal">
+        <div class="modal">
+            <button class="modal-close" data-modal-close aria-label="Close">&times;</button>
+            <div class="modal-header-bar">
+                <h3>Scarica Gratis la guida Mystery Client</h3>
+            </div>
+            <div class="modal-body">
+                <h2 class="modal-title">Scarica la guida pratica (riservata alle aziende)</h2>
+                <p class="modal-desc">Per gestire i tuoi progetti di mystery client. Ti invieremo la guida gratuitamente via email</p>
+                <form method="POST" action="https://mysteryclient.activehosted.com/proc.php" class="offer-form" novalidate>
+                    <input type="hidden" name="u" value="69B3D3809666C">
+                    <input type="hidden" name="f" value="1">
+                    <input type="hidden" name="s">
+                    <input type="hidden" name="c" value="0">
+                    <input type="hidden" name="m" value="0">
+                    <input type="hidden" name="act" value="sub">
+                    <input type="hidden" name="v" value="2">
+                    <input type="hidden" name="or" value="d28f5eb7-2ebe-4745-8da1-2f56b0d03fc6">
+                    <div class="form-group">
+                        <label for="guide-fullname">Nome e Cognome<span class="field-required">*</span></label>
+                        <input type="text" id="guide-fullname" name="fullname" placeholder="Digita il tuo nome" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="guide-azienda">Nome organizzazione (la guida è riservata alle aziende)<span class="field-required">*</span></label>
+                        <input type="text" id="guide-azienda" name="field[2]" placeholder="Inserire l'azienda" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="guide-email">Email (aziendale)<span class="field-required">*</span></label>
+                        <input type="text" id="guide-email" name="email" placeholder="Digita la tua email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="guide-cellulare">Cellulare*</label>
+                        <input type="text" id="guide-cellulare" name="field[4]" placeholder="Inserire il numero di cellulare">
+                    </div>
+                    <button type="submit" class="btn-submit">Invia</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
     <script src="assets/js/script.js"></script>
 </body>
 </html>

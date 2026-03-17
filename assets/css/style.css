@@ -640,6 +640,7 @@ h1,h2,h3,h4,h5,h6 {
     grid-template-columns: 1fr 1fr;
     gap: 50px;
     max-width: 1170px;
+    padding: 0 10px;
     margin: 0 auto;
 }
 
@@ -843,6 +844,7 @@ h1,h2,h3,h4,h5,h6 {
 .service-additional-sec {
     margin: 30px auto 0 auto;
     max-width: 1170px;
+    padding: 0 10px;
 }
 
 .service-additional-sec > p:not(:last-child) {
@@ -854,6 +856,7 @@ h1,h2,h3,h4,h5,h6 {
     grid-template-columns: repeat(4, 1fr);
     gap: 25px;
     max-width: 1170px;
+    padding: 0 10px;
     margin: 0 auto;
 }
 
@@ -952,6 +955,7 @@ h1,h2,h3,h4,h5,h6 {
     gap: 25px;
     max-width: 1170px;
     margin: 0 auto;
+    padding: 0 10px;
     padding-bottom: 30px;
 }
 
@@ -1217,6 +1221,7 @@ h1,h2,h3,h4,h5,h6 {
 
 .inner-content-wrapper {
     max-width: 1170px;
+    padding: 0 10px;
     margin: 0 auto;
 }
 
@@ -1357,6 +1362,451 @@ h1,h2,h3,h4,h5,h6 {
     }
 }
 
+/* ===================== METODO MEBIUS SECTIONS ===================== */
+
+/* Three Phases */
+.metodo-phases-section {
+    padding: 60px 0;
+}
+
+.metodo-phases-title {
+    font-size: 42px;
+    color: var(--header-text-color);
+    margin-bottom: 15px;
+}
+
+.metodo-phases-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.metodo-phase-card {
+    background: #d6d6d6;
+    padding: 35px 30px;
+    border-radius: 4px;
+}
+
+.phase-number {
+    width: 70px;
+    height: 70px;
+    background: var(--secondary-color);
+    color: #fff;
+    font-family: var(--primary-font);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 42px;
+    font-weight: 300;
+    margin: 0 auto 20px;
+}
+
+.metodo-phase-card h3 {
+    text-align: center;
+    font-size: 22px;
+    color: var(--secondary-color);
+    margin-bottom: 15px;
+}
+
+.metodo-phase-card .phase-subtitle {
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 0.95rem;
+}
+
+.metodo-phase-card .checklist li {
+    font-size: 0.9rem;
+    padding: 6px 0 6px 35px;
+}
+
+.metodo-phase-card .checklist li::before {
+    width: 28px;
+    height: 28px;
+    top: 4px;
+}
+
+/* Guarantee */
+.metodo-guarantee-section {
+    padding: 70px 0;
+    background-color: #f9f9f9;
+}
+
+.metodo-guarantee-text {
+    font-size: 36px;
+    text-align: center;
+    line-height: 1.2;
+    margin: 0 auto;
+    letter-spacing: 1px;
+    font-weight: 300;
+    color: #333;
+    font-family: var(--primary-font);
+}
+
+.metodo-guarantee-text strong {
+    color: var(--secondary-color);
+    font-weight: 600;
+}
+
+/* How It Works Banner */
+.metodo-how-banner {
+    background: var(--secondary-color);
+    padding: 40px 0;
+    text-align: center;
+}
+
+.metodo-how-banner h2 {
+    color: #fff;
+    font-size: 64px;
+}
+
+/* Flow Diagram */
+.metodo-diagram-section {
+    padding: 80px 0;
+}
+
+.metodo-diagram-img {
+    max-width: 1034px;
+    margin: 0 auto;
+}
+
+/* Customer Journey */
+.metodo-journey-section {
+    padding: 40px 0 60px;
+}
+
+.metodo-journey-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+}
+
+.metodo-journey-left h2 {
+    font-size: 42px;
+    color: var(--header-text-color);
+    line-height: 1.3;
+    margin-bottom: 15px;
+}
+
+.metodo-journey-left p,
+.metodo-journey-right p {
+    line-height: 1.8;
+    margin-bottom: 14px;
+    text-align: justify;
+}
+
+.metodo-journey-left p strong,
+.metodo-journey-right p strong,
+.metodo-passage-left p strong {
+    color: var(--secondary-color);
+}
+
+/* Passage Section */
+.metodo-passage-section {
+    padding-bottom: 60px;
+}
+
+.metodo-passage-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+}
+
+.metodo-passage-left p {
+    text-align: justify;
+    line-height: 1.6;
+    margin-bottom: 16px;
+}
+
+.metodo-passage-left h3 {
+    color: var(--secondary-color);
+    margin-bottom: 16px;
+    line-height: 1.4;
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.metodo-passage-right h2 {
+    font-size: 42px;
+    color: var(--header-text-color);
+    line-height: 1.3;
+    margin-bottom: 15px;
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+    .metodo-phases-title,
+    .metodo-journey-left h2,
+    .metodo-passage-right h2 {
+        font-size: 32px;
+    }
+    .metodo-phase-card {
+        padding: 24px 20px;
+    }
+    .metodo-how-banner h2 {
+        font-size: 42px;
+    }
+    .metodo-diagram-section {
+        padding: 40px 0;
+    }
+    .metodo-guarantee-text {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 767px) {
+    .metodo-phases-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .metodo-journey-grid,
+    .metodo-passage-grid {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .metodo-passage-right {
+        order: -1;
+    }
+}
+
+@media (max-width: 576px) {
+    .metodo-phases-section,
+    .metodo-guarantee-section,
+    .metodo-diagram-section,
+    .metodo-journey-section,
+    .metodo-passage-section {
+        padding: 30px 0;
+    }
+
+    .metodo-phases-title,
+    .metodo-how-banner h2,
+    .metodo-journey-left h2,
+    .metodo-passage-right h2 {
+        font-size: 24px;
+    }
+
+    .metodo-guarantee-text {
+        font-size: 20px;
+    }
+
+    .metodo-how-banner {
+        padding: 25px 0;
+    }
+}
+
+/* ===================== SOFTWARE REPORT IMAGE SECTION ===================== */
+.software-report-float {
+    margin: 30px 0;
+    overflow: hidden;
+}
+
+.software-report-float::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.software-float-image {
+    float: left;
+    width: 45%;
+    margin: 0 20px 20px 0;
+}
+
+.software-float-image img {
+    width: 100%;
+    border-radius: 4px;
+}
+
+.software-report-float h3 {
+    font-size: 28px;
+    color: var(--header-text-color);
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.software-report-float h4 {
+    font-size: 22px;
+    color: var(--header-text-color);
+    margin-top: 30px;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.software-report-float p {
+    text-align: justify;
+    line-height: 1.8;
+    margin-bottom: 16px;
+}
+
+.software-report-float p:last-child {
+    margin-bottom: 0;
+}
+
+@media (max-width: 767px) {
+    .software-float-image {
+        float: none;
+        width: 100%;
+        margin: 0 0 25px 0;
+    }
+}
+
+/* ===================== PERSONE SPECIALI SECTION ===================== */
+.persone-speciali-section {
+    padding: 50px 0 60px;
+}
+
+/* .persone-content-wrapper {
+    max-width: 1170px;
+    padding: 0 10px;
+    margin: 0 auto;
+} */
+
+.persone-content-wrapper h2 {
+    font-size: 42px;
+    color: var(--header-text-color);
+    line-height: 1.3;
+    margin-bottom: 15px;
+}
+
+.persone-content-wrapper h3 {
+    font-size: 28px;
+    color: var(--header-text-color);
+    margin-top: 35px;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.persone-content-wrapper > p {
+    text-align: justify;
+    line-height: 1.8;
+    margin-bottom: 16px;
+}
+
+.content-separator {
+    border: none;
+    border-top: 1px solid #ddd;
+    margin: 40px 0;
+}
+
+/* Panel Tabs */
+.panel-tabs-section {
+    margin-top: 10px;
+}
+
+.panel-tabs-container {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 30px;
+    align-items: start;
+}
+
+.panel-tabs-nav {
+    display: flex;
+    flex-direction: column;
+    border-left: 3px solid var(--header-bg-color);
+}
+
+.panel-tab {
+    background: none;
+    border: none;
+    text-align: left;
+    padding: 12px 20px;
+    color: var(--header-text-color);
+    font-size: 18px;
+    font-weight: 300;
+    font-family: var(--primary-font);
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+    border-left: 3px solid transparent;
+    margin-left: -3px;
+}
+
+.panel-tab:hover {
+    background: #f5f5f5;
+}
+
+.panel-tab.active {
+    border-left-color: var(--primary-color);
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.panel-tabs-content {
+    padding-top: 5px;
+}
+
+.panel-tab-pane {
+    display: none;
+}
+
+.panel-tab-pane.active {
+    display: block;
+}
+
+.panel-tab-pane p {
+    text-align: justify;
+    line-height: 1.8;
+    margin-bottom: 14px;
+}
+
+@media (max-width: 991px) {
+    .persone-content-wrapper h2 {
+        font-size: 32px;
+    }
+
+    .persone-content-wrapper h3 {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 767px) {
+    .panel-tabs-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .panel-tabs-nav {
+        flex-direction: row;
+        flex-wrap: wrap;
+        row-gap: 16px;
+        border-left: none;
+        border-bottom: 3px solid var(--header-bg-color);
+    }
+
+    .panel-tab {
+        border-left: none;
+        margin-left: 0;
+        border-bottom: 3px solid transparent;
+        margin-bottom: -3px;
+        padding: 10px 15px;
+        font-size: 0.85rem;
+    }
+
+    .panel-tab.active {
+        border-left-color: transparent;
+        border-bottom-color: var(--primary-color);
+    }
+
+    .panel-tab {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 576px) {
+    .persone-speciali-section {
+        padding: 30px 0;
+    }
+
+    .persone-content-wrapper h2 {
+        font-size: 24px;
+    }
+
+    .persone-content-wrapper h3 {
+        font-size: 20px;
+    }
+}
+
 /* ===================== INNER CTA SECTION ===================== */
 .inner-cta-section {
     background: #323232;
@@ -1413,6 +1863,7 @@ h1,h2,h3,h4,h5,h6 {
     gap: 40px;
     align-items: center;
     max-width: 1170px;
+    padding: 0 10px;
     margin: 0 auto;
 }
 
@@ -1420,7 +1871,8 @@ h1,h2,h3,h4,h5,h6 {
     font-size: 36px;
     font-family: var(--primary-font);
     color: var(--header-text-color);
-    line-height: 1.5;
+    line-height: 1.3;
+    font-weight: 300;
 }
 
 .inner-guide-right h2 {
@@ -1651,6 +2103,7 @@ h1,h2,h3,h4,h5,h6 {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
+    padding: 0 10px;
     max-width: 1170px;
     margin: 0 auto;
 }
