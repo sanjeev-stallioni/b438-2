@@ -87,6 +87,15 @@ h1,h2,h3,h4,h5,h6 {
 .accent-text strong {
     color: var(--secondary-color);
 }
+.min-width-100 {
+    min-width: 100px !important;
+}
+.mx-width-180 {
+    max-width: 180px !important;
+}
+.mx-width-200 {
+    max-width: 200px !important;
+}
 
 /* ===================== SHARED BUTTONS ===================== */
 .btn-base {
