@@ -96,6 +96,15 @@ h1,h2,h3,h4,h5,h6 {
 .mx-width-200 {
     max-width: 200px !important;
 }
+.margin-b-40 {
+    margin-bottom: 40px;
+}
+.margin-b-30 {
+    margin-bottom: 30px;
+}
+.margin-b-25 {
+    margin-bottom: 25;
+}
 
 /* ===================== SHARED BUTTONS ===================== */
 .btn-base {
@@ -581,6 +590,10 @@ h1,h2,h3,h4,h5,h6 {
     height: 3px;
     background: var(--secondary-color);
     margin-bottom: 30px;
+}
+.mystery-marketing-news-content .white-divider {
+    background: #fff; 
+    margin: 0 auto 60px;
 }
 .mc-info-left p {
     line-height: 1.9;
