@@ -1,0 +1,10 @@
+<aside class="blog-sidebar">
+    <div class="blog-sidebar-widget">
+        <h3 class="blog-sidebar-title">Categorie</h3>
+        <ul class="blog-categories-list">
+            {% for cat in collections.categories %}
+            <li><a href="/category/{{ cat | slugify }}/">{{ cat }}</a></li>
+            {% endfor %}
+        </ul>
+    </div>
+</aside>
