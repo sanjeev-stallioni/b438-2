@@ -31,12 +31,14 @@
     <link rel="canonical" href="https://mysteryclient.it/il-metodo-mebius/">
 
     <!-- Favicon -->
-    <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon.png">
-    <link rel="icon" sizes="192x192" href="assets/images/favicon.png">
+    <link rel="shortcut icon" type="image/x-icon" href="/assets/images/favicon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/favicon.png">
+    <link rel="icon" sizes="192x192" href="/assets/images/favicon.png">
 
-    <!-- Main CSS -->
-    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="/assets/css/common.css">
+    <link rel="stylesheet" href="/assets/css/modal.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
 </head>
 <body>
     <!-- Start Header -->
@@ -44,7 +46,7 @@
         <div class="app-container">
             <nav class="navbar">
                 <a href="/" class="logo">
-                    <img src="assets/images/logo.png" alt="MysteryClient.it">
+                    <img src="/assets/images/logo.png" alt="MysteryClient.it">
                 </a>
 
                 <button class="mobile-toggle" aria-label="Toggle menu">
@@ -54,17 +56,17 @@
                 </button>
 
                 <ul class="nav-menu">
-                    <li><a href="#" class="nav-link active">Home</a></li>
+                    <li><a href="/" class="nav-link">Home</a></li>
                     <li class="has-dropdown">
-                        <a href="#" class="nav-link">MYSTERY CLIENT <svg class="chevron-icon" width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                        <a href="#" class="nav-link active">MYSTERY CLIENT <svg class="chevron-icon" width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
                         <ul class="dropdown">
-                            <li><a href="#">CHI SIAMO</a></li>
-                            <li><a href="#">COS’E’ IL MC</a></li>
-                            <li><a href="#">IL METODO MEBIUS</a></li>
-                            <li><a href="#">PERSONE SPECIALI</a></li>
-                            <li><a href="#">MYSTERY SOFTWARE</a></li>
+                            <li><a href="/chi-siamo/">CHI SIAMO</a></li>
+                            <li><a href="/cose-il-mystery-client/">COS’E’ IL MC</a></li>
+                            <li><a href="/il-metodo-mebius/" class="active">IL METODO MEBIUS</a></li>
+                            <li><a href="/persone-speciali/">PERSONE SPECIALI</a></li>
+                            <li><a href="/mystery-software/">MYSTERY SOFTWARE</a></li>
                             <li><a href="#">CASI DI STUDIO</a></li>
-                            <li><a href="#">Mystery Marketing News</a></li>
+                            <li><a href="/mystery-marketing-news/">Mystery Marketing News</a></li>
                         </ul>
                     </li>
                     <li class="has-dropdown">
@@ -83,7 +85,7 @@
                             </li>
                         </ul>
                     </li>
-                    <li><a href="#" class="nav-link">Blog</a></li>
+                    <li><a href="/blog/" class="nav-link">Blog</a></li>
                     <li class="has-dropdown">
                         <a href="#" class="nav-link">DIVENTA MYSTERY CLIENT <svg class="chevron-icon" width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
                         <ul class="dropdown">
@@ -189,7 +191,7 @@
         <!-- Start Flow Diagram -->
         <section class="metodo-diagram-section">
             <div class="content-width">
-                <img src="assets/images/metodo-mebius.webp" alt="Il Metodo Mebius - Come funziona" class="metodo-diagram-img">
+                <img src="/assets/images/metodo-mebius.webp" alt="Il Metodo Mebius - Come funziona" class="metodo-diagram-img">
             </div>
         </section>
         <!-- End Flow Diagram -->
@@ -256,7 +258,7 @@
                         <h2>Guida pratica al MC</h2>
                         <div class="mc-info-divider"></div>
                         <div class="inner-guide-right-content">
-                            <img src="assets/images/Guida-al-mystery-shopping.png" alt="Guida pratica al Mystery Client">
+                            <img src="/assets/images/Guida-al-mystery-shopping.png" alt="Guida pratica al Mystery Client">
                             <div>
                                 <p>Ricevi gratuitamente la guida per gestire i tuoi progetti di mystery client.</p>
                                 <a href="#" class="btn-base btn-primary-rounded" data-modal="guideModal">RICHIEDI GRATIS</a>
@@ -277,7 +279,7 @@
             <div class="app-container">
                 <div class="footer-bottom-top">
                     <a href="/" class="footer-logo">
-                        <img src="assets/images/logo-white.png" alt="MysteryClient.it">
+                        <img src="/assets/images/logo-white.png" alt="MysteryClient.it">
                     </a>
                     <div class="footer-social">
                         <a href="https://www.facebook.com/mysteryclient.it/" class="social-icon" target="_blank" aria-label="Facebook">
@@ -365,9 +367,9 @@
     <!-- End Guide Download Modal -->
 
     <!-- Modal Script -->
-    <script src="assets/js/modal.js" defer></script>
+    <script src="/assets/js/modal.js" defer></script>
 
     <!-- Main Javascript -->
-    <script src="assets/js/script.js"></script>
+    <script src="/assets/js/script.js"></script>
 </body>
 </html>

@@ -145,6 +145,7 @@
     padding-block: 14px;
     border-block: 1px solid #eee;
     font-size: 15px;
+    gap: 20px;
     color: var(--medium-gray);
 }
 .blog-card-date {

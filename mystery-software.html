@@ -27,12 +27,13 @@
     <link rel="canonical" href="https://mysteryclient.it/mystery-software/">
 
     <!-- Favicon -->
-    <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon.png">
-    <link rel="icon" sizes="192x192" href="assets/images/favicon.png">
+    <link rel="shortcut icon" type="image/x-icon" href="/assets/images/favicon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/favicon.png">
+    <link rel="icon" sizes="192x192" href="/assets/images/favicon.png">
 
-    <!-- Main CSS -->
-    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="/assets/css/common.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
 </head>
 <body>
     <!-- Start Header -->
@@ -40,7 +41,7 @@
         <div class="app-container">
             <nav class="navbar">
                 <a href="/" class="logo">
-                    <img src="assets/images/logo.png" alt="MysteryClient.it">
+                    <img src="/assets/images/logo.png" alt="MysteryClient.it">
                 </a>
 
                 <button class="mobile-toggle" aria-label="Toggle menu">
@@ -50,17 +51,17 @@
                 </button>
 
                 <ul class="nav-menu">
-                    <li><a href="#" class="nav-link active">Home</a></li>
+                    <li><a href="/" class="nav-link">Home</a></li>
                     <li class="has-dropdown">
-                        <a href="#" class="nav-link">MYSTERY CLIENT <svg class="chevron-icon" width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                        <a href="#" class="nav-link active">MYSTERY CLIENT <svg class="chevron-icon" width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
                         <ul class="dropdown">
-                            <li><a href="#">CHI SIAMO</a></li>
-                            <li><a href="#">COS’E’ IL MC</a></li>
-                            <li><a href="#">IL METODO MEBIUS</a></li>
-                            <li><a href="#">PERSONE SPECIALI</a></li>
-                            <li><a href="#">MYSTERY SOFTWARE</a></li>
+                            <li><a href="/chi-siamo/">CHI SIAMO</a></li>
+                            <li><a href="/cose-il-mystery-client/">COS’E’ IL MC</a></li>
+                            <li><a href="/il-metodo-mebius/">IL METODO MEBIUS</a></li>
+                            <li><a href="/persone-speciali/">PERSONE SPECIALI</a></li>
+                            <li><a href="/mystery-software/" class="active">MYSTERY SOFTWARE</a></li>
                             <li><a href="#">CASI DI STUDIO</a></li>
-                            <li><a href="#">Mystery Marketing News</a></li>
+                            <li><a href="/mystery-marketing-news/">Mystery Marketing News</a></li>
                         </ul>
                     </li>
                     <li class="has-dropdown">
@@ -79,7 +80,7 @@
                             </li>
                         </ul>
                     </li>
-                    <li><a href="#" class="nav-link">Blog</a></li>
+                    <li><a href="/blog/" class="nav-link">Blog</a></li>
                     <li class="has-dropdown">
                         <a href="#" class="nav-link">DIVENTA MYSTERY CLIENT <svg class="chevron-icon" width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
                         <ul class="dropdown">
@@ -98,9 +99,9 @@
                         </ul>
                     </li>
                     <li class="lang-switch has-dropdown">
-                        <a href="#" class="nav-link"><img src="assets/images/IT.svg" alt="IT" class="flag-icon"> <svg class="chevron-icon" width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                        <a href="#" class="nav-link"><img src="/assets/images/IT.svg" alt="IT" class="flag-icon"> <svg class="chevron-icon" width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
                         <ul class="dropdown right-0 min-width-100">
-                            <li><a href="en/mystery-software.html"><img src="assets/images/GB.svg" alt="EN" class="flag-icon"> English</a></li>
+                            <li><a href="/en/mystery-software/"><img src="/assets/images/GB.svg" alt="EN" class="flag-icon"> English</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -140,7 +141,7 @@
                     <h3>Reportistica avanzata e business intelligence</h3>
                     <div class="software-report-float prose">
                         <div class="software-float-image">
-                            <img src="assets/images/mystery-software-dashboard-768x661.jpg" alt="Mystery Software Dashboard">
+                            <img src="/assets/images/mystery-software-dashboard-768x661.jpg" alt="Mystery Software Dashboard">
                         </div>
                         <p>La piattaforma genera output multi-formato per diverse esigenze di fruizione: dashboard interattive per il monitoring real-time, report PDF executive-ready per la condivisione con stakeholder C-level, e dataset Excel per analisi approfondite da parte dei team analytics interni. Il sistema di visualizzazione dati utilizza chart dinamici e heatmap per facilitare l'identificazione immediata di trend e anomalie performance.</p>
                         <p>L'elemento distintivo della nostra soluzione &egrave; la capacit&agrave; di generare un indice composito unico per ogni location o business unit, aggregando metriche provenienti da fonti eterogenee. Questo KPI sintetico consente di benchmarking standardizzato tra diverse tipologie di punti vendita e canali distributivi, fornendo una metrica universale per valutare l'experience quality complessiva.</p>
@@ -205,7 +206,7 @@
             <div class="app-container">
                 <div class="footer-bottom-top">
                     <a href="/" class="footer-logo">
-                        <img src="assets/images/logo-white.png" alt="MysteryClient.it">
+                        <img src="/assets/images/logo-white.png" alt="MysteryClient.it">
                     </a>
                     <div class="footer-social">
                         <a href="https://www.facebook.com/mysteryclient.it/" class="social-icon" target="_blank" aria-label="Facebook">
@@ -251,9 +252,9 @@
     <!-- End Fixed Icons -->
 
     <!-- Tabs Script -->
-    <script src="assets/js/tabs.js" defer></script>
+    <script src="/assets/js/tabs.js" defer></script>
 
     <!-- Main Javascript -->
-    <script src="assets/js/script.js"></script>
+    <script src="/assets/js/script.js"></script>
 </body>
 </html>
