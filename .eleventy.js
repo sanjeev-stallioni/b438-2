@@ -47,6 +47,24 @@ module.exports = function (eleventyConfig) {
       .replace(/(^-|-$)/g, "");
   });
 
+  // Collection: case studies sorted by date (newest first)
+  eleventyConfig.addCollection("caseStudies", function (collectionApi) {
+    return collectionApi.getFilteredByGlob("portfolio/case-studies/*.md").sort((a, b) => {
+      return b.date - a.date;
+    });
+  });
+
+  // Collection: portfolio categories extracted from case studies
+  eleventyConfig.addCollection("portfolioCategories", function (collectionApi) {
+    const cats = new Set();
+    collectionApi.getFilteredByGlob("portfolio/case-studies/*.md").forEach((item) => {
+      if (item.data.categories) {
+        item.data.categories.forEach((cat) => cats.add(cat));
+      }
+    });
+    return [...cats].sort();
+  });
+
   // Collection: categories extracted from posts, sorted alphabetically
   eleventyConfig.addCollection("categories", function (collectionApi) {
     const cats = new Set();

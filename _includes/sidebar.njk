@@ -3,7 +3,7 @@
         <h3 class="blog-sidebar-title">Categorie</h3>
         <ul class="blog-categories-list">
             {% for cat in collections.categories %}
-            <li><a href="/category/{{ cat | slugify }}/">{{ cat }}</a></li>
+            <li><a href="/category/{{ cat | slugify }}/" class="link-secondary">{{ cat }}</a></li>
             {% endfor %}
         </ul>
     </div>

@@ -1,15 +1,15 @@
-{% if resolvedRelatedPosts and resolvedRelatedPosts.length > 0 %}
+{% if resolvedRelatedProjects and resolvedRelatedProjects.length > 0 %}
 <div class="blog-related-posts">
-    <h3 class="blog-related-title">Related Posts</h3>
+    <h3 class="blog-related-title">Related Projects</h3>
     <div class="blog-related-grid">
-        {% for rp in resolvedRelatedPosts %}
+        {% for rp in resolvedRelatedProjects %}
         <div class="blog-related-item">
             {% if rp.image %}
             <img src="{{ rp.image }}" alt="{{ rp.title }}" loading="lazy">
             {% endif %}
             <div class="blog-related-overlay">
                 <div class="blog-card-overlay-icons">
-                    <a href="{{ rp.url }}" class="blog-card-overlay-icon flex-center" aria-label="View post">
+                    <a href="{{ rp.url }}" class="blog-card-overlay-icon flex-center" aria-label="View project">
                         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg>
                     </a>
                     {% if rp.image %}

@@ -208,6 +208,12 @@ h1,h2,h3,h4,h5,h6 {
     transition: color 0.2s;
     white-space: nowrap;
 }
+/* Shared link hover: secondary → primary */
+.link-secondary {
+    color: var(--secondary-color);
+    transition: color 0.2s;
+}
+.link-secondary:hover,
 .nav-link:hover,
 .nav-link.active {
     color: var(--primary-color);
@@ -503,6 +509,23 @@ h1,h2,h3,h4,h5,h6 {
     }
 }
 
+/* Drop Cap */
+.mmn-drop-cap {
+    float: left;
+    font-size: 45px;
+    line-height: 1;
+    color: #fff;
+    background: var(--secondary-color);
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    margin-right: 12px;
+    margin-top: 4px;
+}
+
 /* ===================== FIXED ICONS ===================== */
 .fixed-icons {
     position: fixed;
@@ -549,6 +572,11 @@ h1,h2,h3,h4,h5,h6 {
     .fixed-icon {
         width: 44px;
         height: 44px;
+    }
+    .mmn-drop-cap {
+        font-size: 42px;
+        width: 42px;
+        height: 42px;
     }
 }
 
