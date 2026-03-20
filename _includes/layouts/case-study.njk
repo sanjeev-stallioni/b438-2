@@ -8,7 +8,7 @@ layout: layouts/base.njk
         <div class="page-banner-content">
             <h1>{{ title }}</h1>
             <div class="breadcrumb">
-                <a href="/">Home</a> &rsaquo; <a href="/portfolio/">Portfolio</a> &rsaquo; {{ title }}
+                <a href="/">Home</a> &rsaquo; <a href="/casi-di-studio/">Portfolio</a> &rsaquo; {{ title }}
             </div>
         </div>
     </div>
@@ -41,7 +41,7 @@ layout: layouts/base.njk
                     <span class="case-study-detail-label">Categories:</span>
                     <div class="case-study-detail-value">
                         {% for cat in categories %}
-                        <a href="/portfolio/category/{{ cat | slugify }}/" class="link-secondary">{{ cat }}</a>{% if not loop.last %}<br>{% endif %}
+                        <a href="/casi-di-studio/#{{ cat | slugify }}" class="link-secondary">{{ cat }}</a>{% if not loop.last %}<br>{% endif %}
                         {% endfor %}
                     </div>
                 </div>

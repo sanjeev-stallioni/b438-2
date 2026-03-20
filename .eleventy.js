@@ -18,11 +18,12 @@ module.exports = function (eleventyConfig) {
     return `${months[d.getMonth()]} ${day}${suffix}, ${d.getFullYear()}`;
   });
 
-  // Excerpt filter — first 35 words of content
-  eleventyConfig.addFilter("excerpt", function (content) {
+  // Excerpt filter — first N words of content (default 35)
+  eleventyConfig.addFilter("excerpt", function (content, wordCount) {
     if (!content) return "";
+    const limit = wordCount || 35;
     const words = content.replace(/<[^>]+>/g, "").trim().split(/\s+/);
-    return words.length > 35 ? words.slice(0, 35).join(" ") + "..." : words.join(" ");
+    return words.length > limit ? words.slice(0, limit).join(" ") : words.join(" ");
   });
 
   // Split filter — split content at <!-- split --> marker

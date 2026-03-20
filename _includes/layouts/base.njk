@@ -48,16 +48,17 @@
 
                 <ul class="nav-menu">
                     <li><a href="/" class="nav-link">Home</a></li>
+                    {% set isMCSection = '/chi-siamo' in page.url or '/cose-il-mystery-client' in page.url or '/il-metodo-mebius' in page.url or '/persone-speciali' in page.url or '/mystery-software' in page.url or '/casi-di-studio' in page.url or '/portfolio-items/' in page.url or '/mystery-marketing-news' in page.url %}
                     <li class="has-dropdown">
-                        <a href="#" class="nav-link">MYSTERY CLIENT <svg class="chevron-icon" width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                        <a href="#" class="nav-link{% if isMCSection %} active{% endif %}">MYSTERY CLIENT <svg class="chevron-icon" width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
                         <ul class="dropdown">
-                            <li><a href="/chi-siamo">CHI SIAMO</a></li>
-                            <li><a href="/cose-il-mystery-client">COS'E' IL MC</a></li>
-                            <li><a href="/il-metodo-mebius">IL METODO MEBIUS</a></li>
-                            <li><a href="/persone-speciali">PERSONE SPECIALI</a></li>
-                            <li><a href="/mystery-software">MYSTERY SOFTWARE</a></li>
-                            <li><a href="/portfolio/">CASI DI STUDIO</a></li>
-                            <li><a href="/mystery-marketing-news">Mystery Marketing News</a></li>
+                            <li><a href="/chi-siamo"{% if '/chi-siamo' in page.url %} class="active"{% endif %}>CHI SIAMO</a></li>
+                            <li><a href="/cose-il-mystery-client"{% if '/cose-il-mystery-client' in page.url %} class="active"{% endif %}>COS'E' IL MC</a></li>
+                            <li><a href="/il-metodo-mebius"{% if '/il-metodo-mebius' in page.url %} class="active"{% endif %}>IL METODO MEBIUS</a></li>
+                            <li><a href="/persone-speciali"{% if '/persone-speciali' in page.url %} class="active"{% endif %}>PERSONE SPECIALI</a></li>
+                            <li><a href="/mystery-software"{% if '/mystery-software' in page.url %} class="active"{% endif %}>MYSTERY SOFTWARE</a></li>
+                            <li><a href="/casi-di-studio/"{% if '/casi-di-studio' in page.url or '/portfolio-items/' in page.url %} class="active"{% endif %}>CASI DI STUDIO</a></li>
+                            <li><a href="/mystery-marketing-news"{% if '/mystery-marketing-news' in page.url %} class="active"{% endif %}>Mystery Marketing News</a></li>
                         </ul>
                     </li>
                     <li class="has-dropdown">
@@ -175,5 +176,6 @@
     <script src="/assets/js/script.js"></script>
     <script src="/assets/js/lightbox.js"></script>
     <script src="/assets/js/blog-scroll.js"></script>
+    <script src="/assets/js/portfolio-filter.js"></script>
 </body>
 </html>
