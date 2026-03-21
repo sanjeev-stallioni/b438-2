@@ -908,6 +908,9 @@
     font-weight: 400;
     color: var(--header-text-color);
 }
+.mystery-client-content .btn-center {
+    margin-top: 30px;
+}
 .mc-tech-text h3 {
     margin: 40px 0;
 }
