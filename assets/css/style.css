@@ -6,10 +6,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 50% 50%;
-    display: flex;
-    align-items: center;
     padding: 20px;
-    justify-content: center;
 }
 .hero-content {
     position: relative;
@@ -146,12 +143,13 @@
     background: var(--secondary-color);
     margin-bottom: 30px;
 }
-.mystery-marketing-news-content .white-divider {
+.white-divider {
     background: #fff;
     margin: 0 auto 60px;
 }
-.mc-info-left p {
-    line-height: 1.9;
+.mc-info-left p,
+.servizi-intro-section .inner-content-text p {
+    line-height: 1.8;
     text-align: justify;
     margin-bottom: 30px;
 }
@@ -480,10 +478,6 @@
     .inner-content-box {
         padding: 35px;
     }
-    .inner-content-text h2,
-    .checklist-col h3 {
-        font-size: 32px;
-    }
     .checklist-grid,
     .inner-content-top {
         grid-template-columns: 1fr;
@@ -501,10 +495,6 @@
     }
     .inner-content-box {
         padding: 25px 20px;
-    }
-    .inner-content-text h2,
-    .checklist-col h3 {
-        font-size: 24px;
     }
     .breadcrumb {
         text-wrap: wrap;
@@ -536,9 +526,6 @@
     color: #fff;
     font-family: var(--primary-font);
     border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     font-size: 42px;
     font-weight: 300;
     margin: 0 auto 20px;
@@ -615,6 +602,12 @@
     line-height: 1.1;
     margin-bottom: 15px;
 }
+.metodo-passage-right h2 {
+    text-align: right;
+}
+.metodo-passage-right .mc-info-divider {
+    margin-left: auto;
+}
 .metodo-journey-left p,
 .metodo-journey-right p {
     line-height: 1.8;
@@ -650,11 +643,25 @@
     .metodo-phase-card {
         padding: 24px 20px;
     }
+    .metodo-journey-grid,
+    .metodo-passage-grid {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
     .metodo-how-banner h2 {
         font-size: 42px;
     }
     .metodo-diagram-section {
         padding: 40px 0;
+    }
+    .metodo-passage-right h2 {
+        text-align: left;
+    }
+    .metodo-passage-right .mc-info-divider {
+        margin-left: inherit;
+    }
+    .metodo-passage-right {
+        order: -1;
     }
     .metodo-guarantee-text {
         font-size: 32px;
@@ -663,14 +670,6 @@
 @media (max-width: 767px) {
     .metodo-phases-grid {
         grid-template-columns: 1fr;
-    }
-    .metodo-journey-grid,
-    .metodo-passage-grid {
-        grid-template-columns: 1fr;
-        gap: 0;
-    }
-    .metodo-passage-right {
-        order: -1;
     }
 }
 @media (max-width: 576px) {
@@ -892,6 +891,45 @@
     }
 }
 
+/* Mystery Client Technology Text */
+.mc-tech-text {
+    padding: 60px 0 0 0;
+}
+.mystery-h3 {
+    font-size: 22px;
+    margin-bottom: 20px;
+    color: var(--header-text-color);
+}
+.mc-tech-text h3,
+.mystery-client-content .inner-cta-section h3 {
+    font-size: 38px;
+    line-height: 1.3;
+    text-align: center;
+    font-weight: 400;
+    color: var(--header-text-color);
+}
+.mc-tech-text h3 {
+    margin: 40px 0;
+}
+.mystery-client-content .inner-cta-section h3 {
+    color: #fff;
+}
+.mystery-client-content .inner-content-box {
+    padding: 0 !important;
+}
+@media (max-width: 991px) {
+    .mc-tech-text h3,
+    .mystery-client-content .inner-cta-section h3 {
+        font-size: 32px;
+    }
+}
+@media (max-width: 576px) {
+    .mc-tech-text h3,
+    .mystery-client-content .inner-cta-section h3 {
+        font-size: 28px;
+    }
+}
+
 /* ===================== INNER GUIDE SECTION ===================== */
 .inner-guide-section {
     padding: 60px 0;
@@ -1008,8 +1046,6 @@
     .chi-siamo-left h2 {
         font-size: 28px;
     }
-}
-@media (max-width: 767px) {
     .chi-siamo-grid {
         grid-template-columns: 1fr;
         gap: 30px;
@@ -1018,6 +1054,8 @@
         max-width: 240px;
         margin: auto;
     }
+}
+@media (max-width: 767px) {
     .chi-siamo-right {
         padding-top: 0;
     }
@@ -1103,7 +1141,7 @@
     overflow: hidden;
     margin: 0 auto;
 }
-.inner-cta-section.bg-img {
+.inner-cta-section.bg-img, .contact-form-section {
     background-image: url('/assets/images/contact-form.webp');
     background-repeat: no-repeat;
     background-size: cover;
@@ -1135,9 +1173,6 @@
     height: 40px;
     border-radius: 50%;
     cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     transition: background 0.2s;
 }
 .mmn-slider-arrow:hover {
@@ -1196,5 +1231,256 @@
     }
     .mmn-slider-section {
         padding: 40px 0;
+    }
+}
+
+/* ===================== SERVIZI PAGE ===================== */
+.servizi-intro-section {
+    padding: 60px 0;
+    background: #F9F9F9;
+}
+.servizi-intro-section .inner-content-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Service Pillars */
+.servizi-pillars-section {
+    padding: 0 0 60px;
+    background: #F9F9F9;
+}
+.servizi-pillars-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-bottom: 40px;
+}
+.servizi-pillar-card {
+    background: #F44336;
+    color: #fff;
+    padding: 30px;
+}
+.servizi-pillar-header {
+    text-align: center;
+}
+.servizi-pillar-header h3 {
+    font-size: 22px;
+    letter-spacing: 1px;
+    margin-bottom: 14px;
+}
+.servizi-pillar-header p {
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 30px;
+}
+.servizi-pillar-body .checklist li {
+    line-height: 1.8;
+    padding: 6px 0 16px 35px;
+}
+.servizi-pillar-body .checklist li::before {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23fff' viewBox='0 0 16 16'%3E%3Cpath d='M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425z'/%3E%3C/svg%3E");
+}
+
+/* Bottom Grid: Case Studies + Blog */
+.servizi-bottom-section {
+    padding: 60px 0;
+}
+.servizi-bottom-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: start;
+}
+
+/* Case Studies Slider */
+.servizi-slider-wrapper {
+    border-radius: 4px;
+    overflow: hidden;
+}
+.servizi-slider-wrapper .mmn-slider-slide {
+    flex: 0 0 100%;
+}
+.servizi-slider-wrapper .portfolio-item-image {
+    margin-bottom: 0;
+}
+.servizi-slider-wrapper .portfolio-item-image img {
+    height: 400px;
+    object-fit: cover;
+}
+/* Blog Posts List */
+.servizi-blog-list {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.servizi-blog-item {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+    transition: opacity 0.2s;
+}
+.servizi-blog-item:hover {
+    opacity: 0.85;
+}
+.servizi-blog-thumb {
+    flex-shrink: 0;
+    width: 144px;
+    height: 116px;
+    overflow: hidden;
+}
+.servizi-blog-thumb img {
+    height: 100%;
+    object-fit: cover;
+}
+.servizi-blog-title {
+    font-size: 20px;
+    line-height: 1.5;
+    color: var(--secondary-color);
+}
+@media (max-width: 991px) {
+    .servizi-pillars-grid,
+    .contact-page-content .mc-info-grid {
+        grid-template-columns: 1fr;
+    }
+    .servizi-bottom-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+}
+@media (max-width: 576px) {
+    .servizi-intro-section {
+        padding: 40px 0;
+    }
+    .servizi-pillars-section {
+        padding: 0 0 40px;
+    }
+    .servizi-bottom-section {
+        padding: 40px 0;
+    }
+    .servizi-slider-wrapper .portfolio-item-image img {
+        height: 260px;
+    }
+}
+
+/* ===================== CONTACT PAGE ===================== */
+.contact-title {
+    text-align: center;
+    margin-bottom: 60px;
+}
+.contact-intro {
+    text-align: center;
+}
+.contact-intro h2 {
+    font-size: 22px;
+    line-height: 1.5;
+    font-weight: 300;
+    color: #2d2d2d;
+}
+.contact-intro strong,
+.link-secondary strong {
+    font-weight: 500;
+}
+.contact-cards-section {
+    padding: 0 0 70px;
+}
+.contact-card {
+    background: var(--header-text-color);
+    text-align: center;
+    color: #fff;
+}
+.contact-card h4 {
+    font-size: 22px;
+    color: #fff;
+    margin-bottom: 15px;
+    text-align: center;
+}
+.contact-card > p:not(:last-child) {
+    margin-bottom: 8px;
+}
+.contact-cta,
+.contact-map-section h2 {
+    text-align: center;
+    color: #fff;
+}
+.contact-cta h2,
+.contact-map-section h2 {
+    font-size: 36px;
+    line-height: 1.3;
+    margin-bottom: 30px;
+}
+.contact-map-section {
+    padding-top: 40px;
+}
+.contact-map {
+    width: 100%;
+    height: 450px;
+    border: 0;
+    border-radius: 4px;
+}
+.contact-address {
+    text-align: center;
+}
+.contact-address h3 {
+    font-size: 24px;
+    color: var(--header-text-color);
+    margin-bottom: 20px;
+}
+.contact-address p {
+    line-height: 2;
+}
+.contact-directions {
+    text-align: left;
+    margin-top: 30px;
+}
+.contact-directions p {
+    margin-bottom: 12px;
+}
+.contact-directions a {
+    text-decoration: underline;
+}
+
+/* Contact Form + CTA Grid */
+.contact-form-grid {
+    align-items: center;
+}
+.contact-form-wrapper {
+    background: #fff;
+    border-radius: 6px;
+    overflow: hidden;
+}
+.contact-form-credit {
+    margin-top: 20px;
+    font-size: 13px;
+    color: var(--body-text-color);
+    line-height: 1.5;
+}
+.contact-form-credit strong {
+    color: var(--header-text-color);
+}
+.contact-map-section .white-divider {
+    background: #fff;
+    margin: 0 auto 40px;
+}
+@media (max-width: 991px) {
+    .contact-form-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    .contact-form-wrapper {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+}
+@media (max-width: 576px) {
+    .contact-cta h2,
+    .contact-map-section h2 {
+        font-size: 28px;
+    }
+    .contact-map {
+        height: 300px;
+    }
+    .contact-title {
+        margin-bottom: 30px;
     }
 }

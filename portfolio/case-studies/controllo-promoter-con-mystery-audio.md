@@ -9,7 +9,7 @@ categories:
 permalink: "/portfolio-items/controllo-promoter-con-mystery-audio/"
 ---
 
-<span class="mmn-drop-cap">C</span>ome migliorare la performance di una rete promozionale fornita da aziende esterne. Audio Mystery Shopping. Un nostro cliente promuove i propri prodotti attraverso promoter all'interno di centri commerciali, le promoter vengono fornite da agenzie specializzate.
+<span class="mmn-drop-cap flex-center">C</span>ome migliorare la performance di una rete promozionale fornita da aziende esterne. Audio Mystery Shopping. Un nostro cliente promuove i propri prodotti attraverso promoter all'interno di centri commerciali, le promoter vengono fornite da agenzie specializzate.
 
 Per questo è interesse del marchio verificare:
 
