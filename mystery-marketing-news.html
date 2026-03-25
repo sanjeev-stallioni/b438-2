@@ -35,6 +35,7 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="/assets/css/common.css">
+    <link rel="stylesheet" href="/assets/css/modal.css">
     <link rel="stylesheet" href="/assets/css/style.css">
 </head>
 <body>
@@ -69,8 +70,8 @@
                     <li class="has-dropdown">
                         <a href="/servizi/" class="nav-link">SERVIZI <svg class="chevron-icon" width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
                         <ul class="dropdown">
-                            <li><a href="#">Mystery Client</a></li>
-                            <li><a href="#">Voice of Customer</a></li>
+                            <li><a href="/mystery-client/">Mystery Client</a></li>
+                            <li><a href="/voice-of-customer/">Voice of Customer</a></li>
                             <li><a href="#">Business Intelligence</a></li>
                             <li><a href="#">Mystery Automotive</a></li>
                             <li class="has-subdropdown">
@@ -202,7 +203,7 @@
             <div class="app-container">
                 <h2>Sei interessato al nostro servizio?</h2>
                 <div class="mc-info-divider white-divider"></div>
-                <a href="contatti.html" class="btn-base btn-primary-rounded">CONTATTACI</a>
+                <a href="#" class="btn-base btn-primary-rounded" data-modal="contactModal">CONTATTACI</a>
             </div>
         </section>
         <!-- End CTA Section -->
@@ -260,6 +261,52 @@
         </a>
     </div>
     <!-- End Fixed Icons -->
+
+    <!-- Start Contact Modal -->
+    <div class="modal-overlay" id="contactModal">
+        <div class="modal">
+            <button class="modal-close" data-modal-close aria-label="Close">&times;</button>
+            <div class="modal-body">
+                <form method="POST" action="https://mysteryclient.activehosted.com/proc.php" class="offer-form" novalidate>
+                    <input type="hidden" name="u" value="69B3EE829525E">
+                    <input type="hidden" name="f" value="5">
+                    <input type="hidden" name="s">
+                    <input type="hidden" name="c" value="0">
+                    <input type="hidden" name="m" value="0">
+                    <input type="hidden" name="act" value="sub">
+                    <input type="hidden" name="v" value="2">
+                    <input type="hidden" name="or" value="446861cb-ed42-4109-af5a-898d96f969c8">
+                    <h2 class="modal-title">Compila il form ti contatteremo prima possibile</h2>
+                    <p class="modal-desc">Se hai necessit&agrave; di valutare i nostri servizi compila i campi qui sotto, il nostro responsabile commerciale ti contatter&agrave; in giornata</p>
+                    <div class="form-group">
+                        <label for="contact-fullname">Nome Completo<span class="field-required">*</span></label>
+                        <input type="text" id="contact-fullname" name="fullname" placeholder="Digita il tuo nome" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="contact-azienda">Azienda</label>
+                        <input type="text" id="contact-azienda" name="field[2]" placeholder="Se disponibile inserisci la ragione sociale">
+                    </div>
+                    <div class="form-group">
+                        <label for="contact-cellulare">Cellulare<span class="field-required">*</span></label>
+                        <input type="text" id="contact-cellulare" name="field[4]" placeholder="Inserire il proprio numero di cellulare" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="contact-email">Email (aziendale)<span class="field-required">*</span></label>
+                        <input type="text" id="contact-email" name="email" placeholder="Digita la tua email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="contact-note">Note</label>
+                        <textarea id="contact-note" name="field[8]" placeholder="" rows="3"></textarea>
+                    </div>
+                    <button type="submit" class="btn-base btn-submit">Invia</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- End Contact Modal -->
+
+    <!-- Modal Script -->
+    <script src="/assets/js/modal.js" defer></script>
 
     <!-- Slider Javascript -->
     <script src="/assets/js/slider.js"></script>

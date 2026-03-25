@@ -3,7 +3,7 @@ title: "Nuovo Pannello Voice of Customer"
 description: "Questo mese abbiamo aggiunto alla nostra dashboard per i clienti una analisi della Voce Dei Clienti (in inglese Voice Of Customer) dove inseriamo i commenti più significativi che i nostri Mystery Client inseriscono nei questionari selezionati dai nostri esperti di retail."
 date: 2024-03-05
 author: "Redazione MysteryClient.it"
-image: "/assets/images/blogs/voice-of-the-customer-voc-Large.jpg"
+image: "/assets/images/blogs/voice-of-the-customer-voc-Large.webp"
 category: "Novità Mystery Client"
 permalink: "/nuovo-pannello-voice-of-customer/"
 relatedPosts:
