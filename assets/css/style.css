@@ -886,9 +886,6 @@
     .inner-cta-section h2 {
         font-size: 32px;
     }
-    .inner-cta-section p {
-        font-size: 16px;
-    }
 }
 
 /* Mystery Client Technology Text */
@@ -1340,6 +1337,11 @@
     font-size: 20px;
     line-height: 1.5;
     color: var(--secondary-color);
+}
+.text-with-list ul {
+    list-style-type: disc;
+    padding: 0 0 0 20px;
+    margin: 16px 0;
 }
 @media (max-width: 991px) {
     .servizi-pillars-grid,
