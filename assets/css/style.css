@@ -1937,6 +1937,12 @@
 .fg-tech-col {
     text-align: center;
 }
+.mystery-shopper-il-libro-content .inner-content-image {
+    justify-content: start;
+}
+.mystery-shopper-il-libro-content .inner-content-top {
+    grid-template-columns: auto 1fr;
+}
 
 /* Focus Group Responsive */
 @media (max-width: 1024px) {
@@ -1957,6 +1963,9 @@
     .fg-tech-col .section-title {
         font-size: 32px;
     }
+    .mystery-shopper-il-libro-content .inner-content-top {
+        grid-template-columns: auto 1fr;
+    }
 }
 @media (max-width: 767px) {
     .fg-tech-grid {
@@ -1965,6 +1974,10 @@
     }
     .side-divider-white {
         display: none;
+    }
+    .mystery-shopper-il-libro-content .inner-content-top {
+        grid-template-columns: 1fr;
+        margin: 0;
     }
 }
 @media (max-width: 576px) {
