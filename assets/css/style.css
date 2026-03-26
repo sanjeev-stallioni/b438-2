@@ -1488,3 +1488,315 @@
         margin-bottom: 30px;
     }
 }
+
+/* ===================== ISCRIVERSI A MYSTERY CLIENT PAGE ===================== */
+/* App Download Grid */
+.imc-app-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin: 0 auto;
+}
+.imc-app-item {
+    text-align: center;
+    background-color: #D6D6D6;
+    padding: 24px;
+}
+.imc-app-icon img {
+    width: 69px;
+    margin: 0 auto;
+}
+.imc-app-item h3 {
+    font-size: 22px;
+    color: var(--secondary-color);
+    margin: 16px 0;
+}
+.imc-app-item p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    flex-wrap: wrap;
+}
+.imc-store-badge {
+    width: auto !important;
+    height: 60px;
+    display: inline-block !important;
+}
+
+/* Vuoi Lavorare Section */
+.imc-vuoi-lavorare {
+    text-align: center;
+}
+.imc-vuoi-lavorare .section-title {
+    margin-bottom: 20px;
+}
+.imc-vuoi-lavorare p {
+    line-height: 1.8;
+    font-size: 22px;
+    font-family: var(--primary-font);
+    margin: 0 auto 16px auto;
+    font-weight: 300;
+    color: var(--header-text-color);
+}
+.imc-store-badges {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+.imc-store-badges a {
+    display: block;
+}
+.imc-store-badges img {
+    height: 60px;
+    width: auto;
+}
+
+/* Come Funziona Section */
+.imc-come-funziona {
+    background: var(--secondary-color);
+    padding: 60px 0;
+    text-align: center;
+}
+.imc-come-funziona h2 {
+    color: #fff;
+}
+.imc-steps-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    padding: 60px 0 0 0;
+}
+.imc-step {
+    text-align: center;
+    padding: 20px;
+    background-color: #D6D6D6;
+}
+.imc-step-number {
+    width: 70px;
+    height: 70px;
+    background-color: var(--secondary-color);
+    border-radius: 50%;
+    font-family: var(--primary-font);
+    font-size: 36px;
+    color: #fff;
+    font-weight: 300;
+    margin: 0 auto 20px;
+}
+.imc-step p {
+    font-size: 22px;
+    font-family: var(--primary-font);
+    font-weight: 300;
+    color: var(--secondary-color);
+    line-height: 1.6;
+}
+
+/* Vantaggi Section */
+.imc-vantaggi-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: start;
+}
+.imc-vantaggi-left .section-title {
+    margin-bottom: 30px;
+}
+.imc-vantaggi-left p,
+.imc-vantaggi-right p {
+    line-height: 1.8;
+    margin-bottom: 14px;
+}
+.imc-vantaggi-left p strong,
+.imc-vantaggi-right p strong {
+    color: var(--secondary-color);
+}
+
+/* Guida Download Section */
+.imc-guida-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+.imc-guida-left .section-title {
+    margin-bottom: 25px;
+}
+.imc-guida-left .imc-guida-text {
+    font-size: 17px;
+}
+.imc-guida-content {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+.imc-guida-image {
+    flex-shrink: 0;
+    width: 210px;
+}
+.imc-guida-text p {
+    line-height: 1.7;
+    margin-bottom: 14px;
+}
+.imc-guida-right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.imc-guida-form-wrapper {
+    padding: 30px;
+    max-width: 400px;
+    width: 100%;
+    background-color: #F6F6F6;
+}
+.imc-guida-form-wrapper h3 {
+    font-size: 30px;
+    color: var(--header-text-color);
+    margin-bottom: 12px;
+}
+.imc-guida-form-wrapper > p {
+    line-height: 1.6;
+    font-size: 14px;
+    margin-bottom: 20px;
+    color: var(--header-text-color);
+}
+.imc-guida-form-wrapper > p strong {
+    color: var(--header-text-color);
+}
+.imc-guida-form .form-group {
+    margin-bottom: 14px;
+}
+.imc-guida-form label {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--header-text-color);
+    margin-bottom: 5px;
+}
+.imc-guida-form input[type="email"] {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #979797;
+    border-radius: 4px;
+    font-size: 14px;
+    font-family: var(--body-font);
+    color: #000;
+    transition: border-color 0.2s;
+}
+.imc-guida-form input[type="email"]:focus {
+    outline: none;
+    border-color: var(--secondary-color);
+}
+
+/* Testimonials Section */
+.imc-testimonials-section {
+    background: var(--secondary-color);
+    padding: 60px 0;
+    text-align: center;
+}
+.imc-testimonials-section .section-title {
+    color: #fff;
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+.imc-testimonials-section .white-divider {
+    margin-bottom: 40px;
+}
+.imc-testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    text-align: left;
+}
+.imc-testimonial-card {
+    background: #fff;
+    padding: 30px 25px;
+    border-radius: 4px;
+}
+.imc-testimonial-card h4 {
+    font-size: 18px;
+    color: var(--header-text-color);
+    margin-bottom: 12px;
+    font-weight: 600;
+}
+.imc-testimonial-card p {
+    font-size: 14px;
+    line-height: 1.7;
+    color: var(--body-text-color);
+    margin-bottom: 16px;
+}
+.imc-testimonial-author {
+    font-size: 14px;
+    color: var(--secondary-color);
+    font-style: italic;
+}
+
+.iscriversi-mc-content h1 {
+    font-size: 64px;
+}
+
+/* Iscriversi MC Responsive */
+@media (max-width: 991px) {
+    .iscriversi-mc-content h1 {
+        font-size: 54px;
+    }
+    .imc-steps-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+    }
+    .imc-vantaggi-grid {
+        grid-template-columns: 1fr;
+        gap: 0px;
+    }
+    .imc-guida-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    .imc-testimonials-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .imc-testimonials-section .section-title,
+    .imc-vantaggi-left .section-title {
+        font-size: 36px;
+    }
+}
+@media (max-width: 767px) {
+    .imc-guida-content {
+        flex-direction: column;
+        align-items: center;
+    }
+    .imc-guida-image {
+        width: 160px;
+    }
+    .imc-app-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+}
+@media (max-width: 576px) {
+    .imc-come-funziona {
+        padding: 40px 0;
+    }
+    .imc-steps-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    .imc-guida-form-wrapper {
+        padding: 20px;
+    }
+    .imc-testimonials-grid {
+        grid-template-columns: 1fr;
+    }
+    .iscriversi-mc-content h1 {
+        font-size: 36px;
+    }
+    .imc-testimonials-section {
+        padding: 40px 0;
+    }
+    .imc-vuoi-lavorare p {
+        font-size: 18px;
+    }
+}
