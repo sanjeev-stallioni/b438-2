@@ -26,8 +26,47 @@
   var delay = 800;
 
   function createCard(post) {
+    if (isCategory) {
+      var wrapper = document.createElement("div");
+      wrapper.className = "blog-card-category blog-card-fadein";
+
+      var html = '<article class="blog-card">';
+      if (post.image) {
+        html +=
+          '<div class="blog-card-image">' +
+          '<img src="' + post.image + '" alt="' + escapeHtml(post.title) + '" loading="lazy">' +
+          '<div class="blog-card-overlay">' +
+          '<div class="blog-card-overlay-icons">' +
+          '<a href="' + post.url + '" class="blog-card-overlay-icon flex-center" aria-label="View post">' + linkSvg + "</a>" +
+          '<button class="blog-card-overlay-icon lightbox-trigger flex-center" data-image="' + post.image + '" aria-label="View image">' + searchSvg + "</button>" +
+          "</div>" +
+          '<p class="blog-card-overlay-title">' + escapeHtml(post.title) + "</p>" +
+          "</div>" +
+          "</div>";
+      }
+      html += '<div class="blog-card-body">';
+      html += '<h2 class="blog-card-title"><a href="' + post.url + '" class="link-secondary">' + escapeHtml(post.title) + "</a></h2>";
+      html += '<p class="blog-card-excerpt">' + escapeHtml(post.excerpt) + ' <a href="' + post.url + '" class="blog-card-link link-secondary">[...]</a></p>';
+      html += "</div></article>";
+
+      var catLinks = "";
+      if (post.categoryLinks && post.categoryLinks.length) {
+        catLinks = post.categoryLinks
+          .map(function (c) { return '<a href="/category/' + c.slug + '/" class="link-secondary">' + escapeHtml(c.name) + "</a>"; })
+          .join(", ");
+      }
+      html +=
+        '<div class="blog-card-footer">' +
+        '<span class="blog-card-date">' + escapeHtml(post.date) + " | " + catLinks + "</span>" +
+        '<a href="' + post.url + '" class="blog-card-readmore link-secondary">Read More</a>' +
+        "</div>";
+
+      wrapper.innerHTML = html;
+      return wrapper;
+    }
+
     var article = document.createElement("article");
-    article.className = "blog-card blog-card-fadein" + (isCategory ? " blog-card-category" : "");
+    article.className = "blog-card blog-card-fadein";
 
     var html = "";
     if (post.image) {
@@ -47,22 +86,8 @@
     html += '<div class="blog-card-body">';
     html += '<h2 class="blog-card-title"><a href="' + post.url + '" class="link-secondary">' + escapeHtml(post.title) + "</a></h2>";
     html += '<p class="blog-card-excerpt">' + escapeHtml(post.excerpt) + ' <a href="' + post.url + '" class="blog-card-link link-secondary">[...]</a></p>';
-
-    if (isCategory) {
-      var catLinks = "";
-      if (post.categoryLinks && post.categoryLinks.length) {
-        catLinks = post.categoryLinks
-          .map(function (c) { return '<a href="/category/' + c.slug + '/" class="link-secondary">' + escapeHtml(c.name) + "</a>"; })
-          .join(", ");
-      }
-      html +=
-        '<div class="blog-card-footer">' +
-        '<span class="blog-card-date">' + escapeHtml(post.date) + " | " + catLinks + "</span>" +
-        '<a href="' + post.url + '" class="blog-card-readmore link-secondary">Read More</a>' +
-        "</div>";
-    }
-
     html += "</div>";
+
     article.innerHTML = html;
     return article;
   }
