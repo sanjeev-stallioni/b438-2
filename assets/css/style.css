@@ -2008,3 +2008,306 @@
         font-size: 20px;
     }
 }
+
+/* ===================== MYSTERY AUTOMOTIVE PAGE ===================== */
+.auto-section-title {
+    font-style: italic;
+}
+.mystery-automotive-content p {
+    font-size: 17px;
+}
+.mystery-automotive-content .inner-cta-section h2 {
+    font-size: 50px;
+}
+.auto-info-bar {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    background: #eef3f9;
+    border-left: 4px solid var(--secondary-color);
+    padding: 25px 30px;
+    margin-bottom: 20px;
+}
+.auto-info-bar .auto-info-icon {
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+}
+.auto-info-bar p {
+    line-height: 1.7;
+    color: var(--body-text-color);
+}
+.auto-cta-center {
+    text-align: center;
+    padding: 20px 0 0;
+}
+.auto-no-bg {
+    background: transparent !important;
+    padding: 0 !important;
+}
+
+/* Auto Cards Grid */
+.auto-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 50px;
+}
+.auto-card {
+    background: #fff;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+.auto-card-header {
+    position: relative;
+}
+.auto-card-header img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+.auto-card-header h3 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(33, 61, 101, 0.85);
+    color: #fff;
+    padding: 12px 20px;
+    font-size: 20px;
+    font-weight: 400;
+}
+.auto-card-body {
+    padding: 25px 20px;
+}
+.auto-card-body > p {
+    margin-bottom: 35px;
+    line-height: 1.7;
+    font-size: 17px;
+}
+.auto-card-body .checklist li {
+    padding: 10px 0 10px 35px;
+    font-size: 17px;
+}
+.auto-card-body .checklist li::before {
+    width: 28px;
+    height: 28px;
+    top: 10px;
+}
+
+/* Auto Red Cards (Post Vendita) */
+.auto-cards-dark {
+    margin-top: 30px;
+}
+.auto-card-red {
+    background: #f44336;
+    color: #fff;
+    padding: 30px 25px;
+    border-radius: 4px;
+}
+.auto-card-red h3 {
+    font-size: 20px;
+    font-weight: 700;
+    font-family: var(--body-font);
+    margin-bottom: 12px;
+    text-align: center;
+}
+.auto-card-red > p {
+    font-size: 17px;
+    line-height: 1.7;
+    margin-bottom: 35px;
+    opacity: 0.9;
+    text-align: center;
+}
+.auto-card-red .checklist li {
+    padding: 10px 0 10px 35px;
+    font-size: 17px;
+    color: rgba(255, 255, 255, 0.95);
+}
+.auto-card-red .checklist li::before {
+    width: 28px;
+    height: 28px;
+    top: 10px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23ffffff' viewBox='0 0 16 16'%3E%3Cpath d='M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425z'/%3E%3C/svg%3E");
+}
+
+/* Auto Blue Cards (Prezzi e BI) */
+.auto-blue-card {
+    background: var(--secondary-color);
+    color: #fff;
+    padding: 30px 25px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+}
+.auto-blue-card h3 {
+    font-size: 20px;
+    font-weight: 700;
+    font-family: var(--body-font);
+    margin-bottom: 15px;
+    color: #fff;
+    text-align: center;
+}
+.auto-blue-card > p {
+    font-size: 17px;
+    line-height: 1.7;
+    margin-bottom: 35px;
+    color: rgba(255, 255, 255, 0.9);
+}
+.auto-blue-card .checklist li {
+    padding: 10px 0 10px 35px;
+    font-size: 17px;
+    color: rgba(255, 255, 255, 0.9);
+}
+.auto-blue-card .checklist li::before {
+    width: 28px;
+    height: 28px;
+    top: 10px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23ffffff' viewBox='0 0 16 16'%3E%3Cpath d='M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425z'/%3E%3C/svg%3E");
+}
+
+/* Auto Verify Cards */
+.auto-verify-card {
+    background: #3a3a3a;
+    color: #fff;
+    padding: 30px 25px;
+    border: 1px solid #555;
+    border-radius: 4px;
+}
+.auto-verify-card h3 {
+    font-size: 20px;
+    font-weight: 700;
+    font-family: var(--body-font);
+    margin-bottom: 15px;
+    color: #fff;
+    text-align: center;
+}
+.auto-verify-card > p {
+    font-size: 17px;
+    line-height: 1.7;
+    margin-bottom: 35px;
+    color: rgba(255, 255, 255, 0.9);
+}
+.auto-verify-card .checklist li {
+    padding: 10px 0 10px 35px;
+    font-size: 17px;
+    color: rgba(255, 255, 255, 0.9);
+}
+.auto-verify-card .checklist li::before {
+    width: 28px;
+    height: 28px;
+    top: 10px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23ffffff' viewBox='0 0 16 16'%3E%3Cpath d='M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425z'/%3E%3C/svg%3E");
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+    .auto-cards-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media (max-width: 767px) {
+    .auto-cards-grid {
+        grid-template-columns: 1fr;
+    }
+    .auto-info-bar {
+        flex-direction: column;
+        padding: 20px;
+    }
+}
+@media (max-width: 576px) {
+}
+
+/* ===================== MYSTERY CLIENT ACADEMY PAGE ===================== */
+.academy-intro-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: start;
+}
+.academy-intro-text p {
+    line-height: 1.8;
+    margin-bottom: 16px;
+}
+.academy-intro-links {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.academy-link-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 25px;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    background: #fff;
+}
+.academy-link-box span {
+    font-size: 17px;
+    color: var(--header-text-color);
+}
+.btn-sm {
+    padding: 10px 28px !important;
+    font-size: 13px !important;
+}
+
+/* Academy Courses Grid */
+.academy-courses-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+.academy-course-card {
+    padding-bottom: 20px;
+}
+.academy-course-top {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 15px;
+}
+.academy-course-thumb {
+    flex-shrink: 0;
+    width: 120px;
+    height: 90px;
+    overflow: hidden;
+    border-radius: 4px;
+}
+.academy-course-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.academy-course-card h3 {
+    font-size: 26px;
+    font-weight: 400;
+    line-height: 1.3;
+}
+.academy-course-card h3 a {
+    color: var(--header-text-color);
+    transition: color 0.2s;
+}
+.academy-course-card h3 a:hover {
+    color: var(--primary-color);
+}
+.academy-course-card > p {
+    font-size: 17px;
+    line-height: 1.7;
+    margin-bottom: 15px;
+    color: var(--body-text-color);
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+    .academy-intro-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+}
+@media (max-width: 767px) {
+    .academy-courses-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+}
